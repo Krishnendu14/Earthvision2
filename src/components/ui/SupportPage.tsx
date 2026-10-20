@@ -13,7 +13,6 @@ import {
   CheckCircle2,
   TrendingUp,
 } from "lucide-react";
-import stickerImg from "../../assets/images/STK-20250314-WA0000.webp";
 
 interface SupportPageProps {
   onBack: () => void;
@@ -27,7 +26,6 @@ export const SupportPage: React.FC<SupportPageProps> = ({ onBack }) => {
   // Time spent supporting counter
   const [secondsSupported, setSecondsSupported] = useState<number>(0);
   const [adsClickedCount, setAdsClickedCount] = useState<number>(0);
-  const [stickerLoadError, setStickerLoadError] = useState<boolean>(false);
 
   // Increment support timer
   useEffect(() => {
@@ -217,41 +215,17 @@ export const SupportPage: React.FC<SupportPageProps> = ({ onBack }) => {
               <Heart className="w-3.5 h-3.5 fill-slate-300 text-slate-300" />
               <span>Official Supporter Sticker</span>
             </span>
-            <span className="text-slate-400 text-[10px]">Verified Asset</span>
           </div>
 
           <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden bg-slate-950 border border-slate-700/60 flex items-center justify-center p-2 group-hover:scale-105 transition-transform duration-300 shadow-inner">
-            {!stickerLoadError ? (
-              <img
-                id="support-page-sticker-img"
-                src={stickerImg || "/STK-20250314-WA0000.webp"}
-                alt="Love you man sticker"
-                className="w-full h-full object-contain select-none"
-                onError={() => {
-                  setStickerLoadError(true);
-                }}
-                loading="eager"
-              />
-            ) : (
-              <div className="flex flex-col items-center justify-center text-center p-4">
-                <div className="relative mb-3">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-pink-500/20 to-rose-400/20 border border-rose-500/40 flex items-center justify-center animate-pulse">
-                    <Heart className="w-10 h-10 text-rose-400 fill-rose-500/30" />
-                  </div>
-                  <Sparkles className="w-5 h-5 text-amber-300 absolute -top-1 -right-1 animate-bounce" />
-                </div>
-                <div className="text-xs font-bold text-slate-200">Animated Supporter Sticker</div>
-                <div className="text-[10px] text-amber-400/90 font-mono mt-1">Binary Corrupted in Git/Upload</div>
-                <div className="text-[9px] text-slate-400 mt-1 max-w-[180px] leading-tight">
-                  Needs raw binary re-upload (not text/hex paste)
-                </div>
-              </div>
-            )}
+            <img
+              id="support-page-sticker-img"
+              src="/STK-20250314-WA0000.webp"
+              alt="Love you man sticker"
+              className="w-full h-full object-contain select-none"
+              loading="eager"
+            />
           </div>
-
-          <p className="text-[11px] text-slate-400 text-center mt-2.5 font-medium">
-            STK-20250314-WA0000.webp • Stored directly in project assets
-          </p>
         </div>
 
         {/* 4. Real-Time Support Impact Meter (Silver Box) */}
@@ -331,47 +305,47 @@ export const SupportPage: React.FC<SupportPageProps> = ({ onBack }) => {
             </div>
           </div>
 
-          {/* AD 2: Embedded Propeller Ads Display Stream #1 (Immortal & Multitag) */}
+          {/* AD 2: Embedded Display Stream #1 */}
           <div className="rounded-2xl overflow-hidden bg-slate-900/90 border border-slate-400/30 shadow-xl p-3 flex flex-col gap-2">
             <div className="flex items-center justify-between px-1 text-[11px] text-slate-300">
               <span className="flex items-center gap-1.5 font-bold">
                 <Flame className="w-3.5 h-3.5 text-slate-300" />
-                <span>Propeller Ads Stream #1 (Multitag & Immortal Tag)</span>
+                <span>Sponsored Partner Stream #1</span>
               </span>
-              <span className="text-[10px] text-slate-400 font-mono">Zones: 270202 / 11581750</span>
+              <span className="text-[10px] text-emerald-400 font-mono">● Active</span>
             </div>
 
             <div className="w-full h-28 sm:h-32 rounded-xl overflow-hidden bg-slate-950 border border-slate-800">
               <iframe
                 ref={adIframeRef1}
-                title="Propeller Sponsor Ads Stream 1"
+                title="Sponsored Stream 1"
                 className="w-full h-full border-0"
                 sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
               />
             </div>
           </div>
 
-          {/* AD 3: Embedded Propeller Ads Display Stream #2 (In-Page Push & Vignette) */}
+          {/* AD 3: Embedded Display Stream #2 */}
           <div className="rounded-2xl overflow-hidden bg-slate-900/90 border border-slate-400/30 shadow-xl p-3 flex flex-col gap-2">
             <div className="flex items-center justify-between px-1 text-[11px] text-slate-300">
               <span className="flex items-center gap-1.5 font-bold">
                 <Tv className="w-3.5 h-3.5 text-slate-300" />
-                <span>Propeller Ads Stream #2 (Push & Vignette Feed)</span>
+                <span>Sponsored Partner Stream #2</span>
               </span>
-              <span className="text-[10px] text-slate-400 font-mono">Zones: 11581771 / 11578682</span>
+              <span className="text-[10px] text-emerald-400 font-mono">● Active</span>
             </div>
 
             <div className="w-full h-28 sm:h-32 rounded-xl overflow-hidden bg-slate-950 border border-slate-800">
               <iframe
                 ref={adIframeRef2}
-                title="Propeller Sponsor Ads Stream 2"
+                title="Sponsored Stream 2"
                 className="w-full h-full border-0"
                 sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
               />
             </div>
           </div>
 
-          {/* AD 4: Bonus Sponsor Quick Link (Zone 11581761) */}
+          {/* AD 4: Bonus Partner Link */}
           <div className="p-4 rounded-2xl bg-gradient-to-r from-slate-900 via-zinc-900 to-slate-900 border border-slate-400/30 shadow-lg flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-2.5">
               <div className="p-2 rounded-xl bg-slate-800 border border-slate-600 text-slate-200">
@@ -396,20 +370,20 @@ export const SupportPage: React.FC<SupportPageProps> = ({ onBack }) => {
             </a>
           </div>
 
-          {/* AD 5: Interactive Multitag Banner Unit */}
+          {/* AD 5: Interactive Banner Unit */}
           <div className="rounded-2xl overflow-hidden bg-slate-900/90 border border-slate-400/30 shadow-xl p-3 flex flex-col gap-2">
             <div className="flex items-center justify-between px-1 text-[11px] text-slate-300">
               <span className="flex items-center gap-1.5 font-bold">
                 <Sparkles className="w-3.5 h-3.5 text-slate-300" />
-                <span>Interactive Sponsor Zone #3</span>
+                <span>Sponsored Partner Stream #3</span>
               </span>
-              <span className="text-[10px] text-slate-400 font-mono">Service Workers Synced</span>
+              <span className="text-[10px] text-emerald-400 font-mono">● Active</span>
             </div>
 
             <div className="w-full h-24 rounded-xl overflow-hidden bg-slate-950 border border-slate-800">
               <iframe
                 ref={adIframeRef3}
-                title="Propeller Sponsor Ads Stream 3"
+                title="Sponsored Stream 3"
                 className="w-full h-full border-0"
                 sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
               />

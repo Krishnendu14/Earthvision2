@@ -139,14 +139,14 @@ export const HireModal: React.FC<HireModalProps> = ({ isOpen, onClose }) => {
           <div>
             <div className="flex items-center gap-2">
               <span className="text-[10px] font-black uppercase tracking-wider text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono">
-                Direct Dispatch • Telegram Connected
+                Direct Inquiries • Fast Response
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-black text-slate-100 tracking-tight mt-1">
               Hire Me / Collaborate
             </h2>
             <p className="text-xs text-slate-400 leading-relaxed mt-0.5">
-              Need a 3D web experience, creative frontend, or custom development? Send your project details and it pings my private Telegram instantly.
+              Need a 3D web experience, creative frontend, or custom development? Send your project details below and I will get back to you promptly.
             </p>
           </div>
         </div>
@@ -162,7 +162,7 @@ export const HireModal: React.FC<HireModalProps> = ({ isOpen, onClose }) => {
                 Inquiry Dispatched Successfully! 🚀
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-sm">
-                Thank you! Your project request has been transmitted directly to my Telegram. I will review it and get back to your contact handle promptly.
+                Thank you! Your project request has been received. I will review your details and get back to your contact handle promptly.
               </p>
             </div>
             <div className="flex items-center gap-3 mt-2 w-full">
@@ -311,7 +311,7 @@ export const HireModal: React.FC<HireModalProps> = ({ isOpen, onClose }) => {
                 {isSubmitting ? (
                   <>
                     <RefreshCw className="w-4 h-4 animate-spin text-cyan-200" />
-                    <span>Transmitting to Telegram...</span>
+                    <span>Sending Inquiry...</span>
                   </>
                 ) : (
                   <>
@@ -321,7 +321,7 @@ export const HireModal: React.FC<HireModalProps> = ({ isOpen, onClose }) => {
                 )}
               </button>
               <p className="text-[11px] text-slate-400 text-center mt-2 font-mono">
-                🔒 Strictly private • Delivered in real time via Cloudflare Pages & Telegram API
+                🔒 Strictly private & confidential • Direct developer response
               </p>
             </div>
           </form>

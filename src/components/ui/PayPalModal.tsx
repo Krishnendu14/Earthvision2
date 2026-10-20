@@ -124,12 +124,12 @@ export const PayPalModal: React.FC<PayPalModalProps> = ({
         <div className="flex items-center justify-center gap-4 text-[11px] text-slate-400 pt-2 border-t border-slate-800">
           <span className="flex items-center gap-1 text-emerald-400">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>Direct PayPal Link</span>
+            <span>Secure & Direct</span>
           </span>
           <span>•</span>
           <span className="flex items-center gap-1 text-amber-300">
             <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500" />
-            <span>100% Goes to Student Dev</span>
+            <span>100% Direct Support</span>
           </span>
         </div>
       </div>

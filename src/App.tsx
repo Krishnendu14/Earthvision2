@@ -485,7 +485,7 @@ export default function App() {
         }}
       />
 
-      {/* 4. Hire Me / Collaboration Modal (Telegram Connected) */}
+      {/* 4. Hire Me / Collaboration Modal */}
       <HireModal
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}

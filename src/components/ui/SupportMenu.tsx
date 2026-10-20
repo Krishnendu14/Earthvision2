@@ -184,7 +184,7 @@ export const SupportMenu: React.FC<SupportMenuProps> = ({
                   support with your time
                 </span>
                 <span className="text-[10px] text-slate-400 truncate">
-                  Watch sponsor ads & view sticker (100% Free)
+                  Support for free • Keep us online
                 </span>
               </div>
             </div>
@@ -224,7 +224,7 @@ export const SupportMenu: React.FC<SupportMenuProps> = ({
             <MessageSquare className="w-4 h-4 text-cyan-400 shrink-0 group-hover:translate-x-0.5 transition-transform" />
           </button>
 
-          {/* Button 4: Hire Me / Collaborate (Telegram connected) */}
+          {/* Button 4: Hire Me / Collaborate */}
           {onHireMe && (
             <>
               <div className="h-px bg-slate-800 my-0.5" />
@@ -245,7 +245,7 @@ export const SupportMenu: React.FC<SupportMenuProps> = ({
                       hire me / collaborate
                     </span>
                     <span className="text-[10px] text-emerald-300/70 truncate">
-                      Direct inquiry via Telegram
+                      Freelance & project inquiries
                     </span>
                   </div>
                 </div>
